@@ -59,7 +59,7 @@ if [ ! -e "/var/www/phpldapadmin/config/config.php" ]; then
   if [ ! -e "$FIRST_START_DONE" ]; then
 
     get_salt() {
-      salt=$(</dev/urandom tr -dc '1324567890#<>,()*.^@$% =-_~;:/{}[]+!`azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN' | head -c64 | tr -d '\\')
+      salt=$(tr -dc '1324567890#<>,()*.^@$% =-_~;:/{}[]+!`azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN' </dev/urandom 2>/dev/null | head -c64 | tr -d '\\')
     }
 
     # phpLDAPadmin cookie secret

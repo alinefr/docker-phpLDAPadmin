@@ -13,7 +13,7 @@ load test_helper
   tmp_file="$BATS_TMPDIR/docker-test"
 
   run_image
-  wait_process apache2 php-fpm7.3
+  wait_process apache2 php-fpm8.2
 
   sleep 5
 
@@ -44,7 +44,7 @@ load test_helper
   sleep 5
 
   # wait phpLDAPadmin container apache2 service
-  wait_process apache2 php-fpm7.3
+  wait_process apache2 php-fpm8.2
 
   sleep 5
 
